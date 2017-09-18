@@ -1,0 +1,86 @@
+
+<html>
+<head>
+<title>
+Vineel`s Web
+</title>
+  <style>
+        .button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: cyan;
+}
+
+/* mouse over link */
+a:hover {
+    color: green;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+    </style>
+
+</head>
+
+<body bgcolor="green">
+<div style="background-color:black">
+<marquee behavior='alternate'>
+<font color='lime'>
+<H1>Welcome to Vineel Kumar`s Website <?h1>
+</font>
+</marquee>
+<font color='lime'>
+<a href="/vineel/ ">HOME</a>
+
+<a href="/vineel/register ">REGISTER</a>
+
+<a href="/vineel/login">LOGIN</a>
+
+
+</div>
+
+<div align="left">
+
+<h1>Register with Vineel</h1>
+
+        {% if registered %}
+        Vineel says: <strong>thank you for registering!</strong>
+        <a href="">Return to the Registration page.</a><br />
+        {% else %}
+        Vineel says: <strong>register here!</strong><br />
+
+        <form id="user_form" method="post" action="/vineel/register/"
+                enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            
+            {{ user_form.as_p }}
+            {{ profile_form.as_p }}
+
+            <!-- Provide a button to click to submit the form. -->
+            <input type="submit" class="button"name="submit" value="Register" />
+
+        </form>
+        {% endif %}
+</div>
+</body>
+</html>

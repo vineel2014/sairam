@@ -1,0 +1,54 @@
+<html>
+    <head>
+
+        <title>Vineel`s Web</title>
+           <style>
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: cyan;
+}
+
+/* mouse over link */
+a:hover {
+    color: green;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+</style>
+    </head>
+
+    <body bgcolor='green'>
+        <div style="background-color:black">
+        <marquee behavior='alternate'>
+        <font color='lime'>
+        <H1>Welcome to Vineel Kumar`s Website <?h1>
+        </font>
+        </marquee>
+        <font color='lime'>
+        <a align="right" href="/vineel/">HOME</a>
+        <a align="right" href="/vineel/register">REGISTER</a>
+        <a align="right" href="/vineel/login">LOGIN</a>
+
+</div>
+<div>
+        <h1>Login to Vineel Blog</h1>
+
+{% if user.is_authenticated %}
+<h1>Vineel says... hello {{ user.username }}!</h1>
+<a href="/vineel/logout/">Logout</a>
+{% else %}
+<font color='red'><h1>Invalid Login details supplied!</h1></font>
+{% endif %}
+
+</div>
+</body>
+</html>
+

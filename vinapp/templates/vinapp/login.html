@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Vineel`s Web</title>
+        <style>
+        .button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: cyan;
+}
+
+/* mouse over link */
+a:hover {
+    color: green;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+    </style>
+    </head>
+
+    <body bgcolor='green' link="red">
+        <div style="background-color:black">
+        <marquee behavior='alternate'>
+        <font color='lime'>
+        <H1>Welcome to Vineel Kumar`s Website <?h1>
+        </font>
+        </marquee>
+        <font color='lime'>
+        <a href="/vineel/ ">HOME</a>
+
+       <a href="/vineel/register ">REGISTER</a>
+
+       <a href="/vineel/login">LOGIN</a>
+
+
+</div>
+<div align="center">
+        <h1>Login to Vineel Blog</h1>
+
+        <form id="login_form" method="post" action="/vineel/login/">
+            {% csrf_token %}
+            Username: <input type="text" name="username" value="" size="50" />
+            <br />
+            Password: <input type="password" name="password" value="" size="50" />
+
+            <br />
+
+            <input type="submit" class="button" value="signin" />
+
+        </form>
+</div>
+    </body>
+</html>
+

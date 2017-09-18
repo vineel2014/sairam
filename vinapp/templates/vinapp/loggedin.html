@@ -1,0 +1,91 @@
+<html>
+    <head>
+
+        <title>Vineel`s Web</title>
+           <style>
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: cyan;
+}
+
+/* mouse over link */
+a:hover {
+    color: green;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+</style>
+    </head>
+
+    <body bgcolor='green'>
+        <div style="background-color:black">
+        <marquee behavior='alternate'>
+        <font color='lime'>
+        <H1>Welcome to Vineel Kumar`s Website <?h1>
+        </font>
+        </marquee>
+        <font color='lime'>
+      
+       <a align="right" href="/vineel/logout">LOGOUT</a>
+
+</div>
+
+<div>
+        <h1>Login to Vineel Blog</h1>
+
+{% if user.is_authenticated %}
+
+     <div class="alert">
+   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  You are successfully logged in
+  </div>
+    <h1>Vineel says... hello {{ user.username }}!</h1>
+
+    <h1> Logged in username is {{ user.username }}</h1>
+    <h1>Logged in user Email is {{ user.email }}</h1>
+
+
+    <style>
+         /* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: black; /* Red */
+    color: red;
+    margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+    </style>
+
+
+{% else %}
+    <h1>Vineel says... hello world!</h1>
+{% endif %}
+
+</div>
+</body>
+</html>
+

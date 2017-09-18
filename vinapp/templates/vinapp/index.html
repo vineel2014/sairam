@@ -1,0 +1,54 @@
+{%load staticfiles%}
+<html>
+<head>
+<title>
+Vineel`s Web
+</title>
+    <style>
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: cyan;
+}
+
+/* mouse over link */
+a:hover {
+    color: green;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+</style>
+</head>
+<body>
+<div style="background-color:black">
+<marquee behavior='alternate' scrolldelay=1000>
+<font color='lime'>
+<H1>Welcome to Vineel Kumar`s Website <?h1>
+</font>
+</marquee>
+<font dace='BOLD' size=5>
+<a href=" ">HOME</a>
+
+<a href="/vineel/register ">REGISTER</a>
+
+<a href="/vineel/login">LOGIN</a>
+
+<a href="/admin/">ADMIN</a
+</font>
+
+</div>
+<div style="float:left;overflow:hidden;">
+<img src="{% static "images/sai.jpg"%}" alt="NTR" height="100%" width="100%">
+</div>
+<div style="overflow:hidden;">
+<img src="{% static "images/i.jpg"%}" alt="Quote" width="100%" height="100%">
+</div>
+</body>
+</html>
